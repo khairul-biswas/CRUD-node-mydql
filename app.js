@@ -26,6 +26,10 @@ app.get('/about', (req,res) => {
     res.render('pages/about');
 });
 
+// about page
+app.get('/login', (req,res) => {
+    res.render('pages/login');
+});
 
 app.listen('3000', () => {
     console.log('server started on port 3000');
