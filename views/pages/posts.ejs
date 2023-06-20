@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main>
+      <div class="row">
+        <% querys.forEach(function(query){ %>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <a href="/post/<%= query.id %>">
+              <h1><%= query.title %></h1>
+            </a>
+            <p><%= query.body %></p>
+          </div>
+        </div>
+
+        <% }) %>
+      </div>
+    </main>
+
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>

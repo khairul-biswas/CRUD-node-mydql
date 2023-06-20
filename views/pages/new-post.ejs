@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header',{variant: 'compact'}); %></header>
+    <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %>
+
+    <main class="form-signin">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form class="" action="" method="post">
+            <h1 class="h3 mb-3 fw-normal">Add New Post</h1>
+
+            <div class="form-floating">
+              <label for="title">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                placeholder="Title"
+                name="title"
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label for="body">Decription</label>
+              <textarea
+                class="form-control"
+                name="body"
+                id="body"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary mx-auto" type="submit">
+              Publish
+            </button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>
